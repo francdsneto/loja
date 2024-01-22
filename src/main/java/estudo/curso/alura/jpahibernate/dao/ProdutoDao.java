@@ -44,8 +44,7 @@ public class ProdutoDao {
          * Positional Parameter usa-se ?1, e em setParameter passa-se o numero do parametro
          * setParameter(1,nome);
          */
-        String jpql = "SELECT p FROM Produto AS p WHERE p.categoria.nome LIKE CONCAT('%',:nome,'%')";
-        return em.createQuery(jpql, Produto.class)
+        return em.createNamedQuery("Produto.produtosPorCategoria", Produto.class)
                 .setParameter("nome", nome)
                 .getResultList();
     }
