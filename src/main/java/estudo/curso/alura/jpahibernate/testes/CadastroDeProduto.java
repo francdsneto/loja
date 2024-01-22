@@ -1,4 +1,4 @@
-package estudo.curso.alura.jpahibernate;
+package estudo.curso.alura.jpahibernate.testes;
 
 import estudo.curso.alura.jpahibernate.dao.CategoriaDao;
 import estudo.curso.alura.jpahibernate.dao.ProdutoDao;
