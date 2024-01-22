@@ -20,11 +20,13 @@ public class PerformanceConsultas {
 
         EntityManager em = JpaUtil.getEntityManager();
 
-        Pedido pedido = em.find(Pedido.class, 1l);
+        PedidoDao pedidoDao = new PedidoDao(em);
 
-        System.out.println(pedido.getItens().size());
+        Pedido pedido = pedidoDao.buscarPedidoComCliente(1l);
 
         em.close();
+
+        System.out.println(pedido.getCliente().getNome());
 
     }
 
